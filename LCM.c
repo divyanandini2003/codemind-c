@@ -1,12 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    int n1,n2,l;
+    int n1,n2,i;
     scanf("%d%d",&n1,&n2);
-    for(l=1;l<=(n1*n2);l++)
+    for(i=1;i<=(n1*n2);i++)
     {
-        if (l%n1==0 && l%n2==0)
+        if(i%n1==0 && i%n2==0)
         break;
     }
-    printf("%d",l);
+    printf("%d",i);
 }
