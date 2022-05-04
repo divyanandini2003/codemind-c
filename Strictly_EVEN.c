@@ -1,31 +1,38 @@
 #include<stdio.h>
 int main()
 {
-    int n,flag=0;
+    int n,a[100],i,j,s,k,c;
     scanf("%d",&n);
-    int a[n],i;
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
     for(i=0;i<n;i++)
     {
-        if(a[i]%2==0 && i%2==0)
+        int s=0;
+        if(i%2==0)
         {
-          flag=1;
+            s++;
+            int c=0;
+            if(a[i]%2==0)
+            {
+                c++;
+            }
         }
-    
-    else if(a[i]%2==0 && i%2!=0)
-    {
-        flag=0;
-        break;
+        else
+        {
+            k=0;
+            if(a[i]%2==0)
+            {
+                k++;
+            }
+        }
     }
-    }
-    if(flag==1)
+    if(s==c && k==0)
     {
         printf("True");
     }
-    else
+    else if(k>0)
     {
         printf("False");
     }
